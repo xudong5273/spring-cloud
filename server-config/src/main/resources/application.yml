@@ -2,21 +2,18 @@ spring:
   application:
     name: server-config
 
-  port: 8888
-
 #如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写，本例子是公开仓库，放心使用。
   cloud:
     config:
       server:
-      git:
-        uri: https://github.com/xudong5273/spring-cloud/    #配置git仓库地址
-        searchPaths: respo                                   #配置仓库路径
-      label: master                                          #配置仓库的分支
-        username:                                            #访问git仓库的用户名
-        password:                                            #访问git仓库的用户密码
-#        skip-ssl-validation: true                            #取消ssl认证
+        git:
+          uri: https://github.com/xudong5273/spring-cloud    #配置git仓库地址
+          searchPaths: /server-config/src/main/resources/                                   #配置仓库路径
+          username: xudong5273                                            #访问git仓库的用户名
+          password: Xd525273.                                           #访问git仓库的用户密码
+          skip-ssl-validation: true                            #取消ssl认证
+      label: develop                                          #配置仓库的分支
+      profile: dev
 
-beita: beita12312321321321321321
-
-
-
+server:
+  port: 8888
