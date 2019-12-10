@@ -9,9 +9,9 @@
     </parent>
 
     <groupId>com.beita</groupId>
-    <artifactId>service-feign</artifactId>
+    <artifactId>service-zuul</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>service-feign</name>
+    <name>service-zuul</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -30,13 +30,11 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-
-        <!--服务消费者 feign-->
+        <!--路由网关 zuul-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>

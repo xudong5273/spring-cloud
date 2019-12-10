@@ -13,7 +13,7 @@ public class HelloControler {
     @Autowired
     HelloService helloService;
 
-    @GetMapping(value = "/hi")
+    @GetMapping(value = "/ribbon")
     public String hi(@RequestParam String name) {
         return helloService.hiService( name );
     }

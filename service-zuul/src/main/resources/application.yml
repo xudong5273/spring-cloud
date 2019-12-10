@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: service-zuul
+
+server:
+  port: 8769
+
+eureka:
+  client:
+    serviceUrl:
+      #注册中心地址
+      defaultZone: http://localhost:8761/eureka/
+
+
+#  url -> 被映射的url       serviceId -> 服务名
+zuul:
+  routes:
+    api-a:                        #传统的路由配置,此名称可以自定义
+      path: /api-a/**             #映射的url
+      url: http://localhost:8764/   #被映射的url
+    api-b:                        #面向服务的路由配置,此名称可以自定义
+      path: /api-b/**
+      serviceId: service-feign     #服务名
+
+#zuul:
+#  routes:
+#    a:                        #传统的路由配置,此名称可以自定义
+#      path: /api-a/**             #映射的url
+#      url: http://localhost:8764/   #被映射的url
+#    b:                        #面向服务的路由配置,此名称可以自定义
+#      path: /api-b/**
+#      serviceId: service-feign     #服务名
