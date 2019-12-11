@@ -7,13 +7,22 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/xudong5273/spring-cloud    #配置git仓库地址
-          searchPaths: /server-config/src/main/resources/                                   #配置仓库路径
-          username: xudong5273                                            #访问git仓库的用户名
-          password: Xd525273.                                           #访问git仓库的用户密码
-          skip-ssl-validation: true                            #取消ssl认证
-      label: develop                                          #配置仓库的分支
-      profile: dev
+          #配置git仓库地址
+          uri: https://github.com/xudong5273/spring-cloud
+          #配置仓库路径
+          searchPaths: server-config/src/main/resources
+          #访问git仓库的用户名
+          username: xudong5273
+          #访问git仓库的用户密码
+          password: Xd525273.
+          #取消ssl认证
+          skip-ssl-validation: true
+      #配置仓库的分支
+      label: develop
 
 server:
   port: 8888
+
+#  着重看一下像git请求资源的路径说明。/{application}/{profile}[/{label}]----------------(application->配置文件的名字，  profile为版本，   label为分支，不写的话默认master)
+#  例如：http://localhost:8765/test/dev/master,最后一个可以不写，不写的话，默认是master，上面的例子中，
+#  会在配置好的git URI的分支master下的searchPath下去查找 test-dev.yml或者test-dev.properties文件
