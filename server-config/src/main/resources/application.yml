@@ -10,11 +10,11 @@ spring:
           #配置git仓库地址
           uri: https://github.com/xudong5273/spring-cloud
           #配置仓库路径
-          searchPaths: server-config/src/main/resources
+          searchPaths: config/src/main/resources
           #访问git仓库的用户名
-          username: xudong5273
+          username:
           #访问git仓库的用户密码
-          password: Xd525273.
+          password:
           #取消ssl认证
           skip-ssl-validation: true
       #配置仓库的分支

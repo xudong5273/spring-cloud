@@ -9,9 +9,9 @@
     </parent>
 
     <groupId>com.beita</groupId>
-    <artifactId>eureka-client-test</artifactId>
+    <artifactId>config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka-client-test</name>
+    <name>config</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -22,11 +22,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
     </dependencies>
