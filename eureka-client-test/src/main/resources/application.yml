@@ -1,0 +1,18 @@
+spring:
+  rabbitmq:
+    host: 119.3.177.94
+    port: 5672
+    username: guest
+    password: guest
+
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          bus-refresh
