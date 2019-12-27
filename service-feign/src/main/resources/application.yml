@@ -3,7 +3,7 @@ spring:
     name: service-feign
   #zipkin
   zipkin:
-    base-url: http://localhost:9411/
+    base-url: http://119.3.177.94:9411/
     sender:
       type: web
   sleuth:
